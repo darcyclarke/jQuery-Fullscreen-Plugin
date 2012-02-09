@@ -31,24 +31,30 @@ Dual licensed under the MIT and GPL licenses.
  
 ##Examples
 
-`$.extend({ $.fullscreen.settings, { fallback : true, window_url : 'http://google.com' });`
+```javascript
+$.extend({ $.fullscreen.settings, { fallback : true, window_url : 'http://google.com' });`
+```
 
-`$('video').on('click', function(e){
+```javascript
+$('video').on('click', function(e){
 	e.preventDefault();
 	this.pause();
 	$(this).RequestFullScreen(function(){
 		this.play();	
 	});
-});`
+});
+```
 
-`$('.close').on('click', function(e){
+```javascript
+$('.close').on('click', function(e){
 	e.preventDefault();
 	var video = $('video:fullscreen');
 	video[0].pause();
 	video.CancelFullScreen(function(){
 		this.play();
 	});
-});`
+});
+```
 
 ##License
 
