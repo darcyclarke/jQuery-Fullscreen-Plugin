@@ -3,21 +3,24 @@
 @author Darcy Clarke (http://darcyclarke.me)
 @version 1.0
  
-Copyright (c) 2012 Darcy Clarke
-Dual licensed under the MIT and GPL licenses.
- 
 ##Adds: 
  
-- $.support.fullscreen (boolean)
-- :fullscreen pseudo selector & filter (.is .find .filter)
+- `$.support.fullscreen` (boolean)
+- `fullscreen` pseudo selector & filter (.is .find .filter)
 
-- $(el).on("fullscreenchange", fn)
-- $(el).trigger("RequestFullScreen", fn) or $(el).RequestFullScreen(fn)
-- $(el).trigger("CancelFullScreen", fn) or $(el).CancelFullScreen(fn)
+```javascript
+$(el).on("fullscreenchange", fn)
+```
+```javascript
+$(el).trigger("RequestFullScreen", fn) or $(el).RequestFullScreen(fn)
+```
+```javascript
+$(el).trigger("CancelFullScreen", fn) or $(el).CancelFullScreen(fn)
+```
 
 ##Uses
  
-- :-webkit-full-screen and :-moz-fullscreen (no fallbacks)
+- `:-webkit-full-screen` and `:-moz-fullscreen` (no fallbacks)
 - webkit/moz fullscreenchange
 - webkit/moz Cancel/Request FullScreen 
 - W3C fullscreenchange 
@@ -32,7 +35,7 @@ Dual licensed under the MIT and GPL licenses.
 ##Examples
 
 ```javascript
-$.extend({ $.fullscreen.settings, { fallback : true, window_url : 'http://google.com' });`
+$.extend({ $.fullscreen.settings, { fallback : true, window_url : 'http://google.com' });
 ```
 
 ```javascript
