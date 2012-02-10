@@ -14,8 +14,8 @@
  * - :fullscreen pseudo selector & filter (.is .find .filter)
  *
  * - $(el).on("fullscreenchange", fn)
- * - $(el).trigger("RequestFullScreen", fn) or $(el).RequestFullScreen(fn)
- * - $(el).trigger("CancelFullScreen", fn) or $(el).CancelFullScreen(fn)
+ * - $(el).trigger("requestFullScreen", fn) or $(el).requestFullScreen(fn)
+ * - $(el).trigger("cancelFullScreen", fn) or $(el).cancelFullScreen(fn)
  *
  * USES:
  *
@@ -39,7 +39,7 @@
 
 (function($){
 
-	// Namespace
+    // Namespace
     var fs = $.fs = $.fullscreen = {};
     
     // Defaults
@@ -195,7 +195,7 @@
      *
      * @return {jQuery Object} object that will maintain jQuery chainability/integrity
      */
-    $.fn.RequestFullScreen = function(cb){
+    $.fn.requestFullScreen = function(cb){
         cb = (typeof(cb) != 'function') ? function(){} : cb;
         return this.each(function(i, el){
             if(fs.settings.loaded){
@@ -231,7 +231,7 @@
      *
      * @return {jQuery Object} object that will maintain jQuery chainability/integrity
      */
-    $.fn.CancelFullScreen = function(cb){
+    $.fn.cancelFullScreen = function(cb){
         cb = (typeof(cb) != 'function') ? function(){} : cb;
         fs.settings.loaded = false;
         return this.each(function(i, el){
