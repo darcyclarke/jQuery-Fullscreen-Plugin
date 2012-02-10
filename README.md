@@ -12,10 +12,10 @@
 $(el).on("fullscreenchange", fn)
 ```
 ```javascript
-$(el).trigger("RequestFullScreen", fn) or $(el).RequestFullScreen(fn)
+$(el).trigger("requestFullScreen", fn) or $(el).requestFullScreen(fn)
 ```
 ```javascript
-$(el).trigger("CancelFullScreen", fn) or $(el).CancelFullScreen(fn)
+$(el).trigger("cancelFullScreen", fn) or $(el).cancelFullScreen(fn)
 ```
 
 ##Uses
@@ -42,7 +42,7 @@ $.extend({ $.fullscreen.settings, { fallback : true, window_url : 'http://google
 $('video').on('click', function(e){
 	e.preventDefault();
 	this.pause();
-	$(this).RequestFullScreen(function(){
+	$(this).requestFullScreen(function(){
 		this.play();	
 	});
 });
@@ -53,7 +53,7 @@ $('.close').on('click', function(e){
 	e.preventDefault();
 	var video = $('video:fullscreen');
 	video[0].pause();
-	video.CancelFullScreen(function(){
+	video.cancelFullScreen(function(){
 		this.play();
 	});
 });
