@@ -199,7 +199,7 @@
         cb = (typeof(cb) != 'function') ? function(){} : cb;
         return this.each(function(i, el){
             if(fs.settings.loaded){
-                $(el).CancelFullScreen(); 
+                $(el).cancelFullScreen(); 
             } else {
                 if($.support.fullscreen){
                     this[fs.RequestFullScreen]();
