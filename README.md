@@ -29,19 +29,19 @@ $(el).trigger('cancelFullScreen', fn) // or $(el).cancelFullScreen(fn)
 
 ```js
 $.extend($.fullscreen.settings, { fallback: true, window_url: 'http://google.com' })
-$('video').on('click', function(e){
+$('video').on('click', function(e) {
   e.preventDefault()
   this.pause()
-  $(this).requestFullScreen(function(){
+  $(this).requestFullScreen(function() {
     this.play()
   })
 })
-$('.close').on('click', function(e){
-  e.preventDefault();
-  var video = $('video:fullscreen');
-    video[0].pause();
-    video.cancelFullScreen(function(){
-      this.play();
+$('.close').on('click', function(e) {
+  e.preventDefault()
+  var video = $('video:fullscreen')
+    video[0].pause()
+    video.cancelFullScreen(function() {
+      this.play()
   })
 })
 ```
